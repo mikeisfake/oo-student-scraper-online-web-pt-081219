@@ -23,9 +23,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML( open(profile_url))
     
-    socials = doc.css("social-icon-container a").each do |link|
-      
-    end 
+    socials = doc.css("social-icon-container a")
     
     quote = doc.css(".profile-quote").text
     bio = doc.css(".bio-content p").text
