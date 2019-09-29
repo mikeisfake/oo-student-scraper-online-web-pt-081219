@@ -30,8 +30,8 @@ class Scraper
       :linkedin => "",
       :github => "",
       :blog => "",
-      :profil_quote => "",
-      :bio => ""
+      :profile_quote => "",
+      :bio => bio
     }
     binding.pry
     
