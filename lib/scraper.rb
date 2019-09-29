@@ -25,6 +25,17 @@ class Scraper
     
     socials = doc.css(".social-icon-container").children.css("a").map{|a| a.attribute("href").value}
     
+    socials.each do |link|
+      if link.include?("twitter")
+        student_profile[:twitter] = link 
+      elsif link.include?("linkedin")
+        student_profile[:linkedin] = link 
+      elsif link.include?("github")
+        student_profile[:github] = link 
+      elsif link.include?("")
+      end 
+    end 
+    
     quote = doc.css(".profile-quote").text
     bio = doc.css(".bio-content p").text
     
