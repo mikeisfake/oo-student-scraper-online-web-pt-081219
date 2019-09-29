@@ -33,8 +33,8 @@ class Scraper
       :linkedin => "",
       :github => "",
       :blog => "",
-      :profile_quote => quote if doc.css(".bio-content p").text,
-      :bio => bio if doc.css(".bio-content p").text
+      :profile_quote => quote,
+      :bio => bio 
     }
     binding.pry
   end 
