@@ -17,7 +17,7 @@ class Scraper
         }
       end 
     end
-    
+    binding.pry
     student_cards_array
     
   end
