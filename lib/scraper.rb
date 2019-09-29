@@ -17,9 +17,7 @@ class Scraper
         }
       end 
     end
-    binding.pry
     student_cards_array
-    
   end
 
   def self.scrape_profile_page(profile_url)
@@ -27,7 +25,3 @@ class Scraper
   end
 
 end
-
-
-
-#doc.css(".card-text-container h4").map{|student| student.text}
