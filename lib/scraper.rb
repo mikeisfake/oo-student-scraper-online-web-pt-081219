@@ -23,7 +23,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML( open(profile_url))
     
-    bio = doc.css(".details-container.description-holder").text
+    bio = doc.css(".details-container.description-holder p").text
     
     student_profile = {
       :twitter => "",
