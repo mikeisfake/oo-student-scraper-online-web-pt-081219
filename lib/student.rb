@@ -14,6 +14,9 @@ class Student
     # self.profile_quote = student_hash[:profile_quote]
     # self.bio = student_hash[:bio]
     # self.profile_url = student_hash[:profile_url]
+    
+    student_hash.each {|k,v| self.send("k=", v)}
+    
     @@all << self
   end
 
