@@ -37,5 +37,6 @@ class Scraper
       :bio => bio if doc.css(".bio-content p").text
     }
     binding.pry
+  end 
 
 end
