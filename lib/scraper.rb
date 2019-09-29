@@ -23,7 +23,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML( open(profile_url))
     
-    profile_quote = doc.css("")
+    quote = doc.css(".profile-quote").text
     bio = doc.css(".bio-content p").text
     
     student_profile = {
@@ -31,7 +31,7 @@ class Scraper
       :linkedin => "",
       :github => "",
       :blog => "",
-      :profile_quote => "",
+      :profile_quote => quote,
       :bio => bio
     }
     binding.pry
